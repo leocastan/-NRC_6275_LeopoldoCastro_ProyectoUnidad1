@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CP-GDS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <style type="text/css">
+        /*Estilos CSS propios*/
+
+        .fondo {
+            background: url("https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-school-season-back-to-school-season-blue-cartoon-image_11809.jpg");
+            background-color: black;
+            background-position: center;
+
+
+        }
+
+        /* body {
+            background: url("https://wallpx.com/image/2021/05/minimalism-paper-airplane.jpg");
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            font-family: titulares;
+            font-size: 13px;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        label {
+            color: white;
+        }*/
+    </style>
+
+
+</head>
+
+<body>
+    <div class="p-5 bg-light fondo">
+        <!--Título de la página-->
+        <h1 class="text-dark p-1 text-center ">CONOCENOS </h1>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+            </script>
+
+
+    </div>
+    <!--Navbar-->
+    <div class="text-dark bg-primary">
+        <nav class="navbar navbar-expand-lg  ">
+            <div class="container-fluid">
+                <a class="navbar-brand text-dark fw-bold" href="#">Navegación</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!--Primer item del navtab-->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Inicio</a>
+                        </li>
+                        <!--Segundo item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Institución
+                            </a>
+                            <!--Subitems del navtab 2-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('autoridades')}}">Autoridades</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('mision')}}">Mision</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('mision')}}">Vision</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('objetivosInstitucionales')}}">Valores
+                                        Institucionales</a></li>
+                            </ul>
+                        </li>
+                        <!--Tercer item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Historia
+                            </a>
+                            <!--Subitems del navtab 3-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('conocenos')}}">Conocenos</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('galeriaDirectores')}}">Galeria de
+                                        Directores</a></li>
+                            </ul>
+                        </li>
+                        <!--Cuarto item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Interes
+                            </a>
+                            <!--Subitems del navtab 4-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('noticias')}}">Noticias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('actividadesFuturas')}}">Actividades
+                                        Futuras</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('galeriaImagenes')}}">Galería de
+                                        Imágenes</a></li>
+                            </ul>
+                        </li>
+                        <!--Quinto item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Sedes
+                            </a>
+                            <!--Subitems del navtab 5-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('quito')}}">Quito</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('sangolqui')}}">Sangolquí</a></li>
+                            </ul>
+                        </li>
+                        <!--Sexto item del navtab-->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{url_for('contacto')}}">Contacto</a>
+                        </li>
+                        <!--Septimo item del navtab-->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="{{url_for('politicasPrivacidad')}}">Políticas de Privacidad</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <!---->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://asociacionsangabriel.files.wordpress.com/2017/05/whatsapp-image-2017-05-02-at-12-01-34-pm.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+    <!---->
+    <p class="fs-3 text-center">El Colegio Militar Nº 333 “Juan Pablo Arenas Lavayen” brinda sus servicios de educación
+        básica,
+        media y de bachillerato desde el año 1968 cuando fue fundado en la Presidencia del Dr. José María Velasco Ibarra
+        en las antiguas instalaciones de esta institución, hoy en día Centro Comercial Iñaquito (CCI). Hasta la
+        actualidad ya son aproximadamente 100.000 estudiantes que han pasado por su aulas y han adquirido los
+        conocimientos aquí impartidos de forma óptima, contando con una tasa de ingreso a las Instituciones de educación
+        superior nacionales y extranjeras del 90%.<br>
+        <br>
+
+        Hoy en día el Colegio Militar Nº 333 “Juan Pablo Arenas Lavayen” se ha mantenido entre las instituciones de
+        mayor aceptación por parte de estudiantes, sus padres y la población en general ya que, además de brindar los
+        conocimientos en las diferentes ciencias, impulsa en los estudiantes la práctica de valores y el desarrollo
+        físico, indispensables para un crecimiento y desarrollo integral.
+    </p>
+
+
+    <!--Cards-->
+    <div class="row row-cols-1 row-cols-md-2 g-4"
+        style="padding-left: 50px; padding-right: 50px; padding-bottom: 50px;">
+        <div class="col ">
+            <div class="card btn-info shadow p-3 mb-5 bg-body rounded">
+                <div style="text-align: center;">
+                    <!--Boton CCNA-->
+                    <button type="button" class="btn btn-white">
+                        <img src="https://www.vitamina.cl/wp-content/uploads/2017/06/39A2792-1-scaled.jpg"
+                            class="card-img-top" alt="...." style="max-height: 200px;">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <!--Título y parrafo de la primera card-->
+                    <h5 class="card-title text-center">INICIAL</h5>
+                    <p class="card-text text-center">La crianza que permite que un niño crezca de manera integral
+                        (física, mental y socialmente) incluye la alimentación, el cuidado de la salud, la protección,
+                        el estímulo cognitivo y emocional, el cariño y la seguridad del ambiente. Esto es
+                        responsabilidad de las familias, pero también de los Estados, quienes deben asegurar el acceso a
+                        servicios educativos y de salud de calidad.
+
+                        El desarrollo del cerebro depende no sólo de la nutrición adecuada sino también de las
+                        experiencias, oportunidades y estímulos a los que esté expuesto.
+
+                        Como sabemos, las experiencias que vive un niño tanto en el ámbito familiar y en otros entornos
+                        como la escuela son fundamentales. En este sentido, la educación inicial tiene un rol importante
+                        en la construcción de ciertas habilidades cognitivas y sociales..</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card btn-info shadow p-3 mb-5 bg-body rounded">
+                <div style="text-align: center;">
+                    <!--Boton CCSK-->
+                    <button type="button" class="btn btn-white">
+                        <img src="http://www.unioncancun.mx/sites/default/files/styles/galeria/public/field/image/maestra_en_primaria.jpg"
+                            class="card-img-top" alt="..." style="max-height: 200px;">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <!--Título y parrafo del segundo card-->
+                    <h5 class="card-title text-center">BASICA</h5>
+                    <p class="card-text text-center">
+                        BASICA
+                        La educación básica es el ciclo educativo que los estados orientan hacia los niños, niñas y
+                        adolescentes desde la primera infancia hasta finalizar la adolescencia. Abarca desde el nivel
+                        inicial hasta el nivel secundario. Catorce de los diecinueve países que conforman la región
+                        latinoamericana utilizan la denominación “educación básica” para referirse a esa etapa educativa
+                        de sus sistemas nacionales de educación. En Cuba y Panamá, la educación básica coincide con la
+                        obligatoria. En Venezuela, Perú, Nicaragua y Brasil, la educación básica contempla algunos años
+                        de escolarización obligatoria y otros que no lo son. En el resto de los países, la educación
+                        básica constituye una etapa dentro del tramo de escolarización obligatorio.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card btn-info shadow p-3 mb-5 bg-body rounded">
+                <div style="text-align: center;">
+                    <!--Boton ComTIA-->
+                    <button type="button" class="btn btn-white">
+                        <img src="data:image/jpeg;base64,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"
+                            class="card-img-top" alt="..." style="max-height: 200px;">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <!--Título y parrafo del tercer card-->
+                    <h5 class="card-title text-center">MEDIA</h5>
+                    <p class="card-text text-center">La educación secundaria, educación media, segunda enseñanza,
+                        enseñanza secundaria, enseñanza media, estudios medios, o Centro de Formación Integral
+                        (C.F.I.),1​ son los nombres que se dan a la siguiente etapa en la educación formal, posterior a
+                        la enseñanza primaria y antes de la enseñanza superior. En algunos países hispanohablantes se
+                        denomina bachillerato a los últimos cursos de la educación secundaria. Tiene como objetivo
+                        capacitar al alumno para poder iniciar estudios de educación superior. Tras la finalización de
+                        la educación secundaria, es usual optar por el mundo laboral, por una formación profesional o
+                        por estudiar en la universidad. Así, el niño poco a poco aprende cosas nuevas y más complicadas.
+
+                        La educación secundaria puede ser común para todos los alumnos o diversificada en vías
+                        formativas según las salidas posteriores. Las modalidades, a la vez, pueden tener diversas
+                        especializaciones y orientaciones que permiten formarse en temas específicos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card btn-dark shadow p-3 mb-5 bg-body rounded">
+                <div style="text-align: center;">
+
+                    <!--Boton C|PENT-->
+                    <button type="button" class="btn btn-white">
+                        <img src="https://www.eluniverso.com/resizer/-4LPZHpi-GBRoTbqaR-obifgPAo=/780x427/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/SRZFCA5SHJH53CURAGV5TVPSXA.png"
+                            class="card-img-top" alt="..." style="max-height: 200px;">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <!--Título y parrafo del cuarto card-->
+                    <h5 class="card-title text-center">BACHILLERATO</h5>
+                    <p class="card-text text-center">El BGU es el nuevo programa de estudios creado por el Ministerio de
+                        Educación (MinEduc) con el propósito de ofrecer un mejor servicio educativo para todos los
+                        jóvenes que hayan aprobado la Educación General Básica (EGB).
+
+                        El BGU tiene como triple objetivo preparar a los estudiantes: (a) para la vida y la
+                        participación en una sociedad democrática, (b) para el mundo laboral o del emprendimiento, y (c)
+                        para continuar con sus estudios universitarios.
+
+                        En el BGU, todos los estudiantes deben estudiar un grupo de asignaturas centrales denominado
+                        tronco común, que les permite adquirir ciertos aprendizajes básicos esenciales correspondientes
+                        a su formación general. Además del tronco común, los estudiantes pueden escoger entre dos
+                        opciones en función de sus intereses: el Bachillerato en Ciencias o el Bachillerato Técnico.
+
+                        Aquellos que opten por el Bachillerato en Ciencias, además de adquirir los aprendizajes básicos
+                        comunes del BGU, podrán acceder a asignaturas optativas que les permitirán profundizar en
+                        ciertas áreas académicas de su interés. que hayan elegido.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   
+</body>
+
+<!--Pie de página-->
+<div class="fondo ">
+    <div class="row justify-content-end">
+        <div class="col">
+            <h1 class="text-dark p-4 ">CP-GDS</h1>
+        </div>
+        <div class="col">
+            <footer class="text-end text-dark p-3">
+                &copy; Elaborado por: Capt Castro Leopoldo<br>
+                km 24 1/2 vía Quevedo<br>
+                2022
+            </footer>
+        </div>
+    </div>
+</div>
+
+</html>

@@ -116,15 +116,6 @@ def sangolqui():
     return render_template('sangolqui.html')
 
 
-# 3. Funcion controlador que muestra la página autoridades
-# Definicion de la ruta por defecto,
-@app.route('/vision')
-# Lamar a principal
-def vision():
-    '''Esta funcion muestra la página autoridades del sitio'''
-    return render_template('vision.html')
-
-
 # Metodo main del programa
 if __name__ == '__main__':
     # debug = True, para reiniciar automatica el servidor

@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CP-GDS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <style type="text/css">
+        /*Estilos CSS propios*/
+
+        .fondo {
+            background: url("https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-school-season-back-to-school-season-blue-cartoon-image_11809.jpg");
+            background-color: black;
+            background-position: center;
+
+
+        }
+
+        /* body {
+            background: url("https://wallpx.com/image/2021/05/minimalism-paper-airplane.jpg");
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            font-family: titulares;
+            font-size: 13px;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        label {
+            color: white;
+        }*/
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="p-5 bg-light fondo">
+        <!--Título de la página-->
+        <h1 class="text-dark p-1 text-center ">AUTORIDADES</h1>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+            </script>
+
+    </div>
+    <!--Navbar-->
+    <div class="text-dark bg-primary">
+        <nav class="navbar navbar-expand-lg  ">
+            <div class="container-fluid">
+                <a class="navbar-brand text-dark fw-bold" href="#">Navegación</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!--Primer item del navtab-->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Inicio</a>
+                        </li>
+                        <!--Segundo item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Institución
+                            </a>
+                            <!--Subitems del navtab 2-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('autoridades')}}">Autoridades</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('mision')}}">Mision</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('mision')}}">Vision</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('objetivosInstitucionales')}}">Valores
+                                        Institucionales</a></li>
+                            </ul>
+                        </li>
+                        <!--Tercer item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Historia
+                            </a>
+                            <!--Subitems del navtab 3-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('conocenos')}}">Conocenos</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('galeriaDirectores')}}">Galeria de
+                                        Directores</a></li>
+                            </ul>
+                        </li>
+                        <!--Cuarto item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Interes
+                            </a>
+                            <!--Subitems del navtab 4-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('noticias')}}">Noticias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('actividadesFuturas')}}">Actividades
+                                        Futuras</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('galeriaImagenes')}}">Galería de
+                                        Imágenes</a></li>
+                            </ul>
+                        </li>
+                        <!--Quinto item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Sedes
+                            </a>
+                            <!--Subitems del navtab 5-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('quito')}}">Quito</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('sangolqui')}}">Sangolquí</a></li>
+                            </ul>
+                        </li>
+                        <!--Sexto item del navtab-->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{url_for('contacto')}}">Contacto</a>
+                        </li>
+                        <!--Septimo item del navtab-->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="{{url_for('politicasPrivacidad')}}">Políticas de Privacidad</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <!--Cards-->
+    <div class="row row-cols-1 row-cols-md-2 g-4"
+        style="padding-left: 50px; padding-right: 50px; padding-bottom: 50px;">
+        <div class="col ">
+            <div class="card btn-info shadow p-3 mb-5 bg-body rounded">
+                <div style="text-align: center;">
+                    <!--Boton CCNA-->
+                    <button type="button" class="btn btn-white ">
+                        <img src="https://i.ytimg.com/vi/t9fsDnzC018/hqdefault.jpg"
+                            class="card-img-top" alt="...." style="max-height: 200px;">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <!--Título y parrafo de la primera card-->
+                    <h5 class="card-title text-center">PhD. Fernando Diaz</h5>
+                    <h5 class="card-title text-center">1990-1995</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card btn-info shadow p-3 mb-5 bg-body rounded">
+                <div style="text-align: center;">
+                    <!--Boton CCSK-->
+                    <button type="button" class="btn btn-white">
+                        <img src="https://i0.wp.com/www.infolinares.com/wp-content/uploads/2020/01/Gabriel-Beltr%C3%A1n-4.jpg?resize=600%2C398&ssl=1"
+                            class="card-img-top" alt="..." style="max-height: 200px;">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <!--Título y parrafo del segundo card-->
+                    <h5 class="card-title text-center">PhD. Juan Parraga</h5>
+                    <h5 class="card-title text-center">1995-2000</h5>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card btn-info shadow p-3 mb-5 bg-body rounded">
+                <div style="text-align: center;">
+                    <!--Boton ComTIA-->
+                    <button type="button" class="btn btn-white">
+                        <img src="https://e.rpp-noticias.io/normal/2017/01/23/002000_332220.png"
+                            class="card-img-top" alt="..." style="max-height: 200px;">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <!--Título y parrafo del tercer card-->
+                    <h5 class="card-title text-center">PhD. Javier Zapata</h5>
+                    <h5 class="card-title text-center">2000-2005</h5>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card btn-dark shadow p-3 mb-5 bg-body rounded">
+                <div style="text-align: center;">
+
+                    <!--Boton C|PENT-->
+                    <button type="button" class="btn btn-white">
+                        <img src="https://www.religiondigital.org/2019/05/17/educacion/Fernando-Fernandez-Font-sj_2122597817_13608478_660x371.jpg"
+                            class="card-img-top" alt="..." style="max-height: 200px;">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <!--Título y parrafo del cuarto card-->
+                    <h5 class="card-title text-center">PhD. Elias Merizalde</h5>
+                    <h5 class="card-title text-center">2005-2010</h5>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card btn-dark shadow p-3 mb-5 bg-body rounded">
+                <div style="text-align: center;">
+
+                    <!--Boton C|PENT-->
+                    <button type="button" class="btn btn-white">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT6S-HBc9Nlqi2HXarQturwQXri040x1hks33djpgkzrC6FlA3TLK7fFh_7WdUgBzYZYA&usqp=CAU"
+                            class="card-img-top" alt="..." style="max-height: 200px;">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <!--Título y parrafo del cuarto card-->
+                    <h5 class="card-title text-center">PhD. Marlo Vera</h5>
+                    <h5 class="card-title text-center">2010-2017</h5>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card btn-dark shadow p-3 mb-5 bg-body rounded">
+                <div style="text-align: center;">
+
+                    <!--Boton C|PENT-->
+                    <button type="button" class="btn btn-white">
+                        <img src="https://www.diariodecuyo.com.ar/__export/1622605064177/sites/diariodecuyo/img/2021/06/02/ddc020621-011f01.jpg"
+                            class="card-img-top" alt="..." style="max-height: 200px;">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <!--Título y parrafo del cuarto card-->
+                    <h5 class="card-title text-center">PhD. Jose Ramos</h5>
+                    <h5 class="card-title text-center">2017-actualidad</h5>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+
+<!--Pie de página-->
+<div class="fondo ">
+    <div class="row justify-content-end">
+        <div class="col">
+            <h1 class="text-dark p-4 ">CP-GDS</h1>
+        </div>
+        <div class="col">
+            <footer class="text-end text-dark p-3">
+                &copy; Elaborado por: Capt Castro Leopoldo<br>
+                km 24 1/2 vía Quevedo<br>
+                2022
+            </footer>
+        </div>
+    </div>
+</div>
+
+</html>

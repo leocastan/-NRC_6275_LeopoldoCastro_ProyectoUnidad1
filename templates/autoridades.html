@@ -45,15 +45,14 @@
 </head>
 
 <body>
+
     <div class="p-5 bg-light fondo">
         <!--Título de la página-->
-        <h1 class="text-dark p-1 text-center ">COLEGIO PARTICULAR "GOTITAS DEL SABER" </h1>
+        <h1 class="text-dark p-1 text-center ">AUTORIDADES</h1>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
             </script>
 
-        <!--Frase-->
-        <h3 class=" text-dark text-center fst-italic">"El conocimiento es poder" </h3>
     </div>
     <!--Navbar-->
     <div class="text-dark bg-primary">
@@ -69,7 +68,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <!--Primer item del navtab-->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Inicio</a>
                         </li>
                         <!--Segundo item del navtab-->
                         <li class="nav-item dropdown">
@@ -79,19 +78,20 @@
                             </a>
                             <!--Subitems del navtab 2-->
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Autoridades</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('autoridades')}}">Autoridades</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Mision</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('mision')}}">Mision</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Vision</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('mision')}}">Vision</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Objetivos Institucionales</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('objetivosInstitucionales')}}">Valores
+                                        Institucionales</a></li>
                             </ul>
                         </li>
                         <!--Tercer item del navtab-->
@@ -102,11 +102,12 @@
                             </a>
                             <!--Subitems del navtab 3-->
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Conocenos</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('conocenos')}}">Conocenos</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Galeria de Directores</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('galeriaDirectores')}}">Galeria de
+                                        Directores</a></li>
                             </ul>
                         </li>
                         <!--Cuarto item del navtab-->
@@ -117,15 +118,17 @@
                             </a>
                             <!--Subitems del navtab 4-->
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Noticias</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('noticias')}}">Noticias</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Actividades Futuras</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('actividadesFuturas')}}">Actividades
+                                        Futuras</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Galería de Imágenes</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('galeriaImagenes')}}">Galería de
+                                        Imágenes</a></li>
                             </ul>
                         </li>
                         <!--Quinto item del navtab-->
@@ -136,77 +139,28 @@
                             </a>
                             <!--Subitems del navtab 5-->
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Quito</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('quito')}}">Quito</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Sangolquí</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('sangolqui')}}">Sangolquí</a></li>
                             </ul>
                         </li>
                         <!--Sexto item del navtab-->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+                            <a class="nav-link active" aria-current="page" href="{{url_for('contacto')}}">Contacto</a>
                         </li>
                         <!--Septimo item del navtab-->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Políticas de Privacidad</a>
+                            <a class="nav-link active" aria-current="page"
+                                href="{{url_for('politicasPrivacidad')}}">Políticas de Privacidad</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
-
-
-    <!--Carousel-->
-    <div style="padding-left: 200px; padding-right: 200px; padding-top: 50px; padding-bottom: 50px;">
-        <div id="carouselExampleIndicators" class="carousel slide shadow-lg p-3 mb-5 bg-ligth rounded"
-            data-bs-ride="true">
-            <div class="carousel-indicators">
-                <!--Boton de la primera imagen-->
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <!--Boton de la segunda imagen-->
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <!--Boton de la tercera imagen-->
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-
-            <div class="carousel-inner">
-                <!--Primera imagen del carousel-->
-                <div class="carousel-item active">
-                    <img src="data:image/jpeg;base64,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"
-                        class="d-block w-100" alt="...">
-                </div>
-                <!--Segunda imagen del carousel-->
-                <div class="carousel-item">
-                    <img src="https://www.educatemagis.org/wp-content/uploads/2018/05/InnoaAccion-Colegio-San-Gabriel-4-750x515.jpg"
-                        class="d-block w-100" alt="...">
-                </div>
-                <!--Tercera imagen del carousel-->
-                <div class="carousel-item">
-                    <img src="https://losmejorescolegios.ec/wp-content/uploads/2021/11/san-gabriel-destacada.png" class="d-block w-100"
-                        alt="...">
-                </div>
-            </div>
-            <!--Boton para retroceder imagenes-->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <!--Boton para avanzar imagenes-->
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-        </div>
-    </div>
-
-
+    <br>
     <!--Cards-->
     <div class="row row-cols-1 row-cols-md-2 g-4"
         style="padding-left: 50px; padding-right: 50px; padding-bottom: 50px;">
@@ -214,14 +168,15 @@
             <div class="card btn-info shadow p-3 mb-5 bg-body rounded">
                 <div style="text-align: center;">
                     <!--Boton CCNA-->
-                    <button type="button" class="btn btn-white">
-                        <img src="https://www.flacsi.net/wp-content/uploads/2012/01/Sin-t%C3%ADtulo-146.jpg"
-                            class="card-img-top" alt="...." style="max-width: 200px;">
+                    <button type="button" class="btn btn-white ">
+                        <img src="https://sanjuanboscosalamanca.salesianas.org/wp-content/uploads/2019/01/Jes%C3%BAs-M%C2%AA-Calvo-Macho-Director-General.jpg"
+                            class="card-img-top" alt="...." style="max-height: 200px;">
                     </button>
                 </div>
                 <div class="card-body">
                     <!--Título y parrafo de la primera card-->
-                    <h5 class="card-title text-center">Mision</h5>
+                    <h5 class="card-title text-center">PhD. Juan Elias Saltos</h5>
+                    <h5 class="card-title text-center">Director</h5>
                     <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit per
                         fermentum nullam,
                         magnis odio turpis velit litora hendrerit cursus vehicula sodales, cum bibendum etiam facilisi
@@ -239,13 +194,14 @@
                 <div style="text-align: center;">
                     <!--Boton CCSK-->
                     <button type="button" class="btn btn-white">
-                        <img src="https://www.flacsi.net/wp-content/uploads/2012/01/Sin-t%C3%ADtulo-146.jpg"
-                            class="card-img-top" alt="..." style="max-width: 200px;">
+                        <img src="https://colegiochilenorte2020.files.wordpress.com/2013/07/ado-gahona-mancilla-director.jpg"
+                            class="card-img-top" alt="..." style="max-height: 200px;">
                     </button>
                 </div>
                 <div class="card-body">
                     <!--Título y parrafo del segundo card-->
-                    <h5 class="card-title text-center">Vision</h5>
+                    <h5 class="card-title text-center">PhD. Pedro Poma Aguirre</h5>
+                    <h5 class="card-title text-center">Sub-Director</h5>
                     <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit per
                         fermentum nullam,
                         magnis odio turpis velit litora hendrerit cursus vehicula sodales, cum bibendum etiam facilisi
@@ -263,13 +219,14 @@
                 <div style="text-align: center;">
                     <!--Boton ComTIA-->
                     <button type="button" class="btn btn-white">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPRxCLe-U9wCL6ga_rsb5oamzd0nzHcyeN5HJYWc_ZqNrGMgWuh2HsKc_GlxQIExTsVSo&usqp=CAU"
-                            class="card-img-top" alt="..." style="max-width: 200px;">
+                        <img src="https://reydereyes.edu.pe/wp-content/uploads/2020/07/directora_web2.jpg"
+                            class="card-img-top" alt="..." style="max-height: 200px;">
                     </button>
                 </div>
                 <div class="card-body">
                     <!--Título y parrafo del tercer card-->
-                    <h5 class="card-title text-center">Autoridades</h5>
+                    <h5 class="card-title text-center">PhD. Eliana Elizabeth Santacruz</h5>
+                    <h5 class="card-title text-center">Jefe Académico</h5>
                     <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit per
                         fermentum nullam,
                         magnis odio turpis velit litora hendrerit cursus vehicula sodales, cum bibendum etiam facilisi
@@ -288,13 +245,14 @@
 
                     <!--Boton C|PENT-->
                     <button type="button" class="btn btn-white">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPRxCLe-U9wCL6ga_rsb5oamzd0nzHcyeN5HJYWc_ZqNrGMgWuh2HsKc_GlxQIExTsVSo&usqp=CAU"
-                            class="card-img-top" alt="..." style="max-width: 187px;">
+                        <img src="http://www.chimbotenlinea.com/sites/default/files/field/image/entrevista_a_directora_del_colegio_inmaculado_corazon_en_el_dia_del_maestro.jpg"
+                            class="card-img-top" alt="..." style="max-height: 200px;">
                     </button>
                 </div>
                 <div class="card-body">
                     <!--Título y parrafo del cuarto card-->
-                    <h5 class="card-title text-center">Sedes</h5>
+                    <h5 class="card-title text-center">PhD. Maria del Cisne Rosero</h5>
+                    <h5 class="card-title text-center">Jefe Administrativo</h5>
                     <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit per
                         fermentum nullam,
                         magnis odio turpis velit litora hendrerit cursus vehicula sodales, cum bibendum etiam facilisi
@@ -331,58 +289,7 @@
         <br>
 
 
-        <!--Nav-->
-        <nav aria-label="Page navigation example" class="navbar bg-primary text-black">
-            <!--Seccion Nav-->
-            <ul class="text-black">
-                <div class="col-md-7">
-                    <ul class="nav flex-column">
-                        <h4>Redes Sociales</h4>
-                        <!--Elementos de la lista-->
-                        <li class="nav-item">
-                            <a class="nav-link active  text-black " aria-current="page"
-                                href="https://www.facebook.com">Facebook</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="https://www.instagram.com">Instagram</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link  text-black" href="https://www.twitter.com">Twiter</a>
-                        </li>
-                    </ul>
-            </ul>
-
-
-            <!--Seccion Forms-->
-            <ul class="pagination justify-content-center">
-                <div class="text-black">
-                    <h2>CONTACTO</h2>
-            </ul>
-
-            <div class="row justify-content-center"></div>
-            <div class="col-md-7">
-
-                <div class="mb7-">
-                    <label for="exampleFormControlInput1" class="form-label">Nombres </label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="name@example.com">
-                </div>
-                <div class="mb-7">
-                    <label for="exampleFormControlInput1" class="form-label">Correo electronico </label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="name@example.com">
-                </div>
-                <div class="mb-7">
-                    <label for="exampleFormControlTextarea1" class="form-label">Ingresa tu mensaje</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-                    <br>
-                    <div class="align-end">
-                        <button type="submit" class=" btn btn-dark">Submit</button>
-                    </div>
-                </div>
-
-            </div>
-        </nav>
+        
 </body>
 
 <!--Pie de página-->
