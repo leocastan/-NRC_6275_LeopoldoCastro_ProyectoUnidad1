@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CP-GDS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <style type="text/css">
+        /*Estilos CSS propios*/
+
+        .fondo {
+            background: url("https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-school-season-back-to-school-season-blue-cartoon-image_11809.jpg");
+            background-color: black;
+            background-position: center;
+
+
+        }
+
+        /* body {
+            background: url("https://wallpx.com/image/2021/05/minimalism-paper-airplane.jpg");
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            font-family: titulares;
+            font-size: 13px;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        label {
+            color: white;
+        }*/
+    </style>
+
+
+</head>
+
+<body>
+    <div class="p-5 bg-light fondo">
+        <!--Título de la página-->
+        <h1 class="text-dark p-1 text-center ">NOTICIAS </h1>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+            </script>
+
+    </div>
+    <!--Navbar-->
+    <div class="text-dark bg-primary">
+        <nav class="navbar navbar-expand-lg  ">
+            <div class="container-fluid">
+                <a class="navbar-brand text-dark fw-bold" href="#">Navegación</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!--Primer item del navtab-->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Inicio</a>
+                        </li>
+                        <!--Segundo item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Institución
+                            </a>
+                            <!--Subitems del navtab 2-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('autoridades')}}">Autoridades</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('mision')}}">Mision</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('mision')}}">Vision</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('objetivosInstitucionales')}}">Valores
+                                        Institucionales</a></li>
+                            </ul>
+                        </li>
+                        <!--Tercer item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Historia
+                            </a>
+                            <!--Subitems del navtab 3-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('conocenos')}}">Conocenos</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('galeriaDirectores')}}">Galeria de
+                                        Directores</a></li>
+                            </ul>
+                        </li>
+                        <!--Cuarto item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Interes
+                            </a>
+                            <!--Subitems del navtab 4-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('noticias')}}">Noticias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('actividadesFuturas')}}">Actividades
+                                        Futuras</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('galeriaImagenes')}}">Galería de
+                                        Imágenes</a></li>
+                            </ul>
+                        </li>
+                        <!--Quinto item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Sedes
+                            </a>
+                            <!--Subitems del navtab 5-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('quito')}}">Quito</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('sangolqui')}}">Sangolquí</a></li>
+                            </ul>
+                        </li>
+                        <!--Sexto item del navtab-->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{url_for('contacto')}}">Contacto</a>
+                        </li>
+                        <!--Septimo item del navtab-->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="{{url_for('politicasPrivacidad')}}">Políticas de Privacidad</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <!--Carousel-->
+    <div style="padding-left: 200px; padding-right: 200px; padding-top: 50px; padding-bottom: 50px;">
+        <div id="carouselExampleIndicators" class="carousel slide shadow-lg p-3 mb-5 bg-ligth rounded"
+            data-bs-ride="true">
+            <div class="carousel-indicators">
+                <!--Boton de la primera imagen-->
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <!--Boton de la segunda imagen-->
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <!--Boton de la tercera imagen-->
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <!--Primera imagen del carousel-->
+                <div class="carousel-item active">
+                    <img src="https://www.csgabriel.edu.ec/wp-content/uploads/2020/04/HISTORIA-768x512.jpg"
+                        class="d-block w-100" alt="..." >
+                    <p class="text-center fs-3">32 años de institucionalidad</p>
+                </div>
+                <!--Segunda imagen del carousel-->
+                <div class="carousel-item">
+                    <img src="https://www.eluniverso.com/resizer/exwz5CwgdS3dWkSy6OWNf__31m8=/894x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/WC33BMHZ25D7TFFF6RFTVMGOXQ.jpg"
+                        class="d-block w-100" alt="..." >
+                    <p class="text-center fs-3">Padres de familia reclaman reducción en las pensiones</p>
+                </div>
+                <!--Tercera imagen del carousel-->
+                <div class="carousel-item">
+                    <img src="https://www.csgabriel.edu.ec/wp-content/uploads/2021/03/01.-LaXXI-Large-768x471.jpg"
+                        class="d-block w-100" alt="..." >
+                    <p class="text-center fs-3">Club de teatro viajará promocionando una obra.</p>
+                </div>
+            </div>
+            <!--Boton para retroceder imagenes-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <!--Boton para avanzar imagenes-->
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+
+
+
+</body>
+
+<!--Pie de página-->
+<div class="fondo ">
+    <div class="row justify-content-end">
+        <div class="col">
+            <h1 class="text-dark p-4 ">CP-GDS</h1>
+        </div>
+        <div class="col">
+            <footer class="text-end text-dark p-3">
+                &copy; Elaborado por: Capt Castro Leopoldo<br>
+                km 24 1/2 vía Quevedo<br>
+                2022
+            </footer>
+        </div>
+    </div>
+</div>
+
+</html>
