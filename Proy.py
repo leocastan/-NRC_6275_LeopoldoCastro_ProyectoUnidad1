@@ -61,11 +61,11 @@ def galeriaDirectores():
 
 # 3. Funcion controlador que muestra la página autoridades
 # Definicion de la ruta por defecto,
-@app.route('/galeriaImagenes')
+@app.route('/ingresoNotas')
 # Lamar a principal
-def galeriaImagenes():
+def ingresoNotas():
     '''Esta funcion muestra la página autoridades del sitio'''
-    return render_template('galeriaImagenes.html')
+    return render_template('ingresoNotas.html')
 
 # 3. Funcion controlador que muestra la página autoridades
 # Definicion de la ruta por defecto,
