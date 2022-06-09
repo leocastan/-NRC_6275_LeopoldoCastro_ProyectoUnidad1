@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CP-GDS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <style type="text/css">
+        /*Estilos CSS propios*/
+
+        .fondo {
+            background: url("https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-school-season-back-to-school-season-blue-cartoon-image_11809.jpg");
+            background-color: black;
+            background-position: center;
+
+
+        }
+
+       
+    </style>
+
+
+</head>
+
+<body>
+    <div class="p-5 bg-light fondo">
+        <!--Título de la página-->
+        <h1 class="text-dark p-1 text-center ">MISION </h1>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+            </script>
+
+
+    </div>
+    <!--Navbar-->
+    <div class="text-dark bg-primary">
+        <nav class="navbar navbar-expand-lg  ">
+            <div class="container-fluid">
+                <a class="navbar-brand text-dark fw-bold" href="#">Navegación</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!--Primer item del navtab-->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Inicio</a>
+                        </li>
+                        <!--Segundo item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Institución
+                            </a>
+                            <!--Subitems del navtab 2-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('autoridades')}}">Autoridades</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('mision')}}">Mision</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('mision')}}">Vision</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('objetivosInstitucionales')}}">Valores
+                                        Institucionales</a></li>
+                            </ul>
+                        </li>
+                        <!--Tercer item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Historia
+                            </a>
+                            <!--Subitems del navtab 3-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('conocenos')}}">Conocenos</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('galeriaDirectores')}}">Galeria de
+                                        Directores</a></li>
+                            </ul>
+                        </li>
+                        <!--Cuarto item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Interes
+                            </a>
+                            <!--Subitems del navtab 4-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('noticias')}}">Noticias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('actividadesFuturas')}}">Actividades
+                                        Futuras</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('galeriaImagenes')}}">Galería de
+                                        Imágenes</a></li>
+                            </ul>
+                        </li>
+                        <!--Quinto item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Sedes
+                            </a>
+                            <!--Subitems del navtab 5-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('quito')}}">Quito</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('quito')}}">Sangolquí</a></li>
+                            </ul>
+                        </li>
+                        <!--Sexto item del navtab-->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{url_for('contacto')}}">Contacto</a>
+                        </li>
+                        <!--Septimo item del navtab-->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="{{url_for('politicasPrivacidad')}}">Políticas de Privacidad</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <!--Cards-->
+    <div class="card mb-3">
+        <img src="http://www.lasalle-cariamanga.edu.ec/wp-content/uploads/2019/09/mision.png"
+            class="card-img-top mx-auto" alt="..." style="max-height: 250px; max-width: 700px;">
+        <div class="card-body">
+            <h5 class="card-title text-center fs-1">Mision</h5>
+            <p class="card-text text-center fs-3">El Colegio Particular Juan Gabriel busca brindar una educación
+                integral de excelencia,
+                con énfasis en la formación de valores éticos y morales para desarrollar estudiantes competentes,
+                críticos, con identidad cultural y social, respetuosos de los derechos humanos, con valores justicia,
+                responsabilidad, honor, disciplina y lealtad con actitud positiva frente a los problemas sociales y
+                ambientales, capaces de contribuir al engrandecimiento de la sociedad ecuatoriana.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://www.isaacbello.com/wp-content/uploads/2020/01/vision.png" class="card-img-top mx-auto"
+            alt="..." style="max-height: 250px; max-width: 700px;">
+        <div class="card-body">
+            <h5 class="card-title text-center fs-1">Vision</h5>
+            <p class="card-text text-center fs-3">Continuar siendo una institución educativa moderna, innovadora y líder
+                entre las
+                instituciones de educación básica, media y de bachillerato del país, en la formación académica y física,
+                ofreciendo un sistema educativo de calidad, acorde con los avances de la ciencia y la tecnología,
+                disponiendo de una infraestructura moderna para entregar hombres y mujeres de bien, capaces de aportar
+                positivamente al mejoramiento de la calidad de vida de la sociedad en general.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!--Contenedor grid-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 col-sm-4">
+                <img src="https://yt3.ggpht.com/ytc/AKedOLR_oL8pVUfHJp6sgX3j6_WFucAspA9Vz2p-NsT7=s900-c-k-c0x00ffffff-no-rj"
+                    class="rounded mx-auto d-block" alt="..." style="max-width: 200px ;">
+            </div>
+            <div class="col-6 col-sm-7">
+                <!--Blockquote-->
+                <blockquote>
+                    <p class="text-center fs-3" style="padding-left:50px; padding-right: 50px; padding-bottom: 50px;">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit per fermentum nullam,
+                        magnis odio turpis velit litora hendrerit cursus vehicula sodales, cum bibendum etiam facilisi
+                        in elementum ad facilisis rutrum.
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+        <br>
+    </div>
+</body>
+
+<!--Pie de página-->
+<div class="fondo ">
+    <div class="row justify-content-end">
+        <div class="col">
+            <h1 class="text-dark p-4 ">CP-GDS</h1>
+        </div>
+        <div class="col">
+            <footer class="text-end text-dark p-3">
+                &copy; Elaborado por: Capt Castro Leopoldo<br>
+                km 24 1/2 vía Quevedo<br>
+                2022
+            </footer>
+        </div>
+    </div>
+</div>
+
+</html>

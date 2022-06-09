@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CP-GDS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <style type="text/css">
+        /*Estilos CSS propios*/
+
+        .fondo {
+            background: url("https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-school-season-back-to-school-season-blue-cartoon-image_11809.jpg");
+            background-color: black;
+            background-position: center;
+
+
+        }
+
+     
+    </style>
+
+
+</head>
+
+<body>
+    <div class="p-5 bg-light fondo">
+        <!--Título de la página-->
+        <h1 class="text-dark p-1 text-center ">Política de Privacidad </h1>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+            </script>
+
+    </div>
+    <!--Navbar-->
+    <div class="text-dark bg-primary">
+        <nav class="navbar navbar-expand-lg  ">
+            <div class="container-fluid">
+                <a class="navbar-brand text-dark fw-bold" href="#">Navegación</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!--Primer item del navtab-->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Inicio</a>
+                        </li>
+                        <!--Segundo item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Institución
+                            </a>
+                            <!--Subitems del navtab 2-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('autoridades')}}">Autoridades</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('mision')}}">Mision</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('mision')}}">Vision</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('objetivosInstitucionales')}}">Valores
+                                        Institucionales</a></li>
+                            </ul>
+                        </li>
+                        <!--Tercer item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Historia
+                            </a>
+                            <!--Subitems del navtab 3-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('conocenos')}}">Conocenos</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('galeriaDirectores')}}">Galeria de
+                                        Directores</a></li>
+                            </ul>
+                        </li>
+                        <!--Cuarto item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Interes
+                            </a>
+                            <!--Subitems del navtab 4-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('noticias')}}">Noticias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('actividadesFuturas')}}">Actividades
+                                        Futuras</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('galeriaImagenes')}}">Galería de
+                                        Imágenes</a></li>
+                            </ul>
+                        </li>
+                        <!--Quinto item del navtab-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Sedes
+                            </a>
+                            <!--Subitems del navtab 5-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{url_for('quito')}}">Quito</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{{url_for('quito')}}">Sangolquí</a></li>
+                            </ul>
+                        </li>
+                        <!--Sexto item del navtab-->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{url_for('contacto')}}">Contacto</a>
+                        </li>
+                        <!--Septimo item del navtab-->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="{{url_for('politicasPrivacidad')}}">Políticas de Privacidad</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-6">
+                <br>
+                Este aviso de privacidad te da detalles sobre cómo recopilamos y procesamos tus datos personales a
+                través del uso de nuestro sitio www.ejercitoecuatoriano.mil.ec, incluida cualquier información que
+                puedas proporcionar a través del sitio cuando compras un curso, producto o servicio, te registras a
+                nuestro boletín informativo o participas en un sorteo o concurso.
+                <br>
+                Al proporcionarnos tus datos, nos garantizas que tienes más de 18 años de edad.
+
+                <br>
+
+                Detalles de contacto
+                <br>
+                Nombre completo: Ejército Ecuatoriano
+                <br>
+                Dirección de correo electrónico: info@ejercitoecuatoriano.com
+                <br>
+                Dirección postal: Av. Gaspar de Villarroel y Cochapata
+
+                <br>
+
+                Es muy importante que la información que tenemos sobre ti sea precisa y esté actualizada.
+
+                <br>
+
+                Indícanos si en algún momento tu información personal cambia, enviándonos un correo electrónico a
+                info@ejercitoecuatoriano.mil.ec o da click en cualquiera de los enlaces que incluyen los formularios de
+                contáctenos.
+
+                <br>
+
+                Este Portal Web ha sido creado por la empresa con carácter informativo y para uso personal de los
+                usuarios. A través de este Aviso legal, se pretende regular el acceso y uso de este sitio web, así como
+                la relación entre el sitio web y sus usuarios. Accediendo a este sitio web se aceptan los siguientes
+                términos y condiciones:
+
+                <br>
+
+                El acceso a este Portal Web es responsabilidad exclusiva de los usuarios.
+
+                <br>
+
+                El simple acceso a este sitio web no supone entablar ningún tipo de relación comercial entre el Ejército
+                Ecuatoriano y el usuario.
+
+                <br>
+
+                El acceso y la navegación en este sitio web supone aceptar y conocer las advertencias legales,
+                condiciones y términos de uso contenidas en ella.
+
+                <br>
+
+                El titular del sitio web puede ofrecer cursos, servicios o productos que podrán encontrarse sometidos a
+                unas condiciones particulares propias que, según los casos, sustituyan, completen y/o modifiquen las
+                presentes condiciones, y sobre las cuales se informará al usuario en cada caso concreto.
+
+                <br>
+
+                Aviso Legal
+
+                <br>
+
+                A través de este aviso legal, se pretende regular el acceso y uso en general de la relación entre este
+                portal accesible en la dirección de internet www.ejercitoecuatoriano.mil.ec y los usuarios que acceden a
+                el.
+
+                <br>
+
+                <br>
+
+                <br>
+
+                Política de protección de datos
+                <br>
+                Con el fin de facilitar un desarrollo rápido y eficaz en la relación entre el Ejército Ecuatoriano y los
+                usuarios se garantiza mediante este aviso, la privacidad en los servicios online de acuerdo con las
+                exigencias legales y les informa sobre su Política de Protección de Datos para que los usuarios del
+                portal determinen libre y voluntariamente si desean facilitar a el Ejército Ecuatoriano sus datos
+                personales a través de los diferentes formularios electrónicos para la suscripción o contratación de los
+                productos y servicios ofrecidos por el Ejército Ecuatoriano en su website.
+
+                <br>
+
+                También se garantiza la confidencialidad de los datos de carácter personal facilitados por los usuarios
+                y su tratamiento automatizado de acuerdo con la legislación vigente sobre protección de datos
+                personales.
+
+                <br>
+
+                Nuestra empresa ha adoptado los niveles de seguridad de protección de los datos personales y ha
+                instalado todos los medios y medidas técnicas a su alcance para evitar la perdida, mal uso, alteración,
+                acceso no autorizado y robo de los datos personales facilitados.
+
+                <br>
+
+                A pesar de ello el usuario debe ser consciente de que las medidas de seguridad en internet no son
+                inexpugnables.
+
+                <br>
+
+                En el momento en que el usuario nos facilita su email nos esta dando su autorización y consentimiento
+                expreso para incorporar dichos datos a nuestros ficheros automatizados y a enviarle cualquier correo
+                electrónico con información comercial.
+
+                <br>
+
+                Los datos personales recogidos serán objeto de tratamiento automatizado e incorporados a los
+                correspondientes ficheros automatizados.
+
+                <br>
+
+                Nuestra empresa les facilitará los recursos técnicos adecuados para que, con carácter previo a la
+                entrega de los datos personales, puedan acceder a este aviso y prestar su consentimiento.
+
+                <br>
+
+                Los usuarios podrán ejercitar los derechos de acceso, cancelación, rectificación y oposición al
+                tratamiento, uso y cesión de sus datos mediante comunicación dirigida a info@ejercitoecuatoriano.mil.ec
+                solicitando el borrado de sus datos en suscripciones o Boletines, de forma gratuita.
+
+                <br>
+
+                <br>
+
+                Uso de Cookies
+
+                <br>
+
+                El Ejército Ecuatoriano cuenta con la implementación de cookies en sus canales electrónicos.
+
+                <br>
+
+                <br>
+
+                ¿QUÉ DATOS RECOPILAMOS?
+
+                <br>
+
+                NO recopilamos Datos personales significa cualquier información capaz de identificar a un individuo. No
+                incluye datos anónimos.
+
+                <br>
+
+                Recibes Comunicaciones de marketing
+
+                <br>
+
+                Por que nos solicitaste información o nos compraste cursos, productos o servicios y en cualquier caso,
+                siempre y cuando no hayas optado por dejar de recibir dichas comunicaciones.
+
+                <br>
+
+                Puedes solicitarnos que dejemos de enviarte mensajes de marketing en cualquier momento, siguiendo los
+                enlaces que aparecen en cualquier mensaje que le enviemos o enviándonos un correo electrónico a
+                info@ejercitoecuatoriano.mil.ec, en cualquier momento.
+
+                <br>
+
+                Aceptación
+
+                <br>
+
+                El usuario acepta todas y cada una de las condiciones establecidas en el presente instrumento.
+            </div>
+            <div class="col">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<!--Pie de página-->
+<div class="fondo ">
+    <div class="row justify-content-end">
+        <div class="col">
+            <h1 class="text-dark p-4 ">CP-GDS</h1>
+        </div>
+        <div class="col">
+            <footer class="text-end text-dark p-3">
+                &copy; Elaborado por: Capt Castro Leopoldo<br>
+                km 24 1/2 vía Quevedo<br>
+                2022
+            </footer>
+        </div>
+    </div>
+</div>
+
+</html>
