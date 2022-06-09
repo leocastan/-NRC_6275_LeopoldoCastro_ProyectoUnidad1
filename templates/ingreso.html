@@ -146,40 +146,33 @@
     <!--Formulario para el ingreso de nuevas tareas tomado de Bootstrap-->
     <form method="post" action="{{url_for('enviar')}}">
         <div class="form-group">
-            <label>Tarea</label>
-            <input type="text" class="form-control" placeholder="Ingrese la descripción de la tarea" name="descripcion">
+            <label>Estudiante</label>
+            <input type="text" class="form-control" placeholder="Ingrese el nombre del estudiante" name="estudiante">
         </div>
         <div class="form-group">
-            <label>Correo electrónico</label>
-            <input type="email" class="form-control"
-                placeholder="Ingrese el correo electrónico del responsable de la tarea" name="correoElec"
-                aria-describedby="emailHelp">
+            <label>Asignatura</label>
+            <input type="text" class="form-control" placeholder="Ingrese el nombre de la asignatura" name="asignatura">
         </div>
         <div class="form-group">
-            <label>Prioridad</label>
-            <select class="form-select" size="1" aria-label="size 3 name select example" name="prioridad">
-                <option value=""></option>
-                <option value="Baja">Baja</option>
-                <option value="Media">Media</option>
-                <option value="Alta">Alta</option>
-            </select>
-
+            <label>Calificacion</label>
+            <input type="text" class="form-control" placeholder="Ingrese la calificacion" name="calificacion">
         </div>
+        
         <br>
         <div class="d-grid gap-2 col-6 mx-auto">
             <input type="submit" value="Registrar" class="btn btn-primary">
         </div>
     </form><br>
 
-    <h1>Lista de Tareas</h1>
+    <h1>Ingreso de Notas</h1>
 
     <!--Controlador 1.1 Tabla para mostrar las tareas-->
     <table class="table table-dark table-striped">
         <thead>
             <tr>
-                <th scope="col">Descripción de la tarea</th>
-                <th scope="col">Correo electrónico</th>
-                <th scope="col">Prioridad</th>
+                <th scope="col">Estudiante</th>
+                <th scope="col">Asignatura</th>
+                <th scope="col">Calificacion</th>
             </tr>
 
         </thead>
@@ -189,13 +182,11 @@
             <tr>
                 {% for tarea in listaTareas %}
                 <!--Mostrar la descripción de la tarea-->
-                <th>{{tarea.descripcion}}
-                    <button type="submit" class="btn btn-outline-warning">Borrar Registro</button>
-                </th>
+                <th>{{tarea.estudiante}}</th>
                 <!--Mostrar correo electrónico del responsable-->
-                <th>{{tarea.correoElec}}</th>
+                <th>{{tarea.asignatura}}</th>
                 <!--Mostrar la prioridad de la tarea-->
-                <th>{{tarea.prioridad}}</th>
+                <th>{{tarea.calificacion}}</th>
             </tr>
             {% endfor %}
         </tbody>

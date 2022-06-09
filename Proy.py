@@ -1,8 +1,8 @@
 # Importar la biblioteca de flask y librerias necesarias
 from copyreg import pickle
 from tkinter import messagebox
-from flask import Flask, redirect, render_template, url_for
-from requests import request
+from flask import Flask, redirect, render_template, url_for, request
+
 
 
 # Instanciar la aplicación
@@ -126,7 +126,7 @@ listaTareas = []
 @app.route('/ingreso')
 # Lamar a principal
 def ingreso():
-    return render_template('ingresoNotas.html', listaTareas=listaTareas)
+    return render_template('ingreso.html', listaTareas=listaTareas)
 
 # 2. Funcion controlador para agregar lista a tarea de pendientes
 # Definicion de la ruta
@@ -136,12 +136,12 @@ def enviar():
     # Funcion condicional para enviar los datos del formulario
     if request.method == 'POST':
 
-        descripcion = request.form['descripcion']
-        correoElec = request.form['correoElec']
-        prioridad = request.form['prioridad']
+        estudiante = request.form['estudiante']
+        asignatura = request.form['asignatura']
+        calificacion = request.form['calificacion']
 
         # Funcion condicional para no registrar en caso de datos vacios
-        if descripcion == '' or correoElec == '' or prioridad == '':
+        if estudiante == '' or asignatura == '' or calificacion == '':
             #Mensaje de alerta de campos faltantes
             messagebox.showwarning("¡Alerta!","Ingrese todos los campos")
             return redirect(url_for('ingreso'))
@@ -151,12 +151,54 @@ def enviar():
             resultado = messagebox.askquestion("Registrar", "¿Está seguro que desea registrar los datos?")
             #Funcion condicional de confirmacion de registro
             if resultado == "yes":
-                listaTareas.append({'descripcion': descripcion, 'correoElec': correoElec, 'prioridad': prioridad })
+                listaTareas.append({'estudiante': estudiante, 'asignatura': asignatura, 'calificacion': calificacion })
                 return redirect(url_for('ingreso'))
             else:
                 return redirect(url_for('ingreso'))
 
+# 3. Funcion controlador para borrar la lista de tareas
+@app.route('/borrar', methods=['POST'])
+def borrar():
+    if request.method == 'POST':
+        # Funcion condicional para mostrar alerta en caso de no existir
+        if listaTareas == []:
+            messagebox.showwarning("¡Alerta!", "No existen tareas pendientes")
+            return redirect(url_for('ingreso'))
+        else:
+            # Mensaje de autorizacion de borrado
+            resultado = messagebox.askquestion(
+                "Borrar datos", "¿Está seguro de que desea borrar los datos?")
+            # Funcion condicional de confirmacion de borrado
+            if resultado == "yes":
+                messagebox.showinfo("Info", "Los datos han sido borrados")
+                listaTareas.clear()
+                return redirect(url_for('ingreso'))
+            else:
+                return redirect(url_for('ingreso'))
 
+# 4. Funcion controlador para guardar registros en archivo *.pickle
+@app.route('/guardar', methods=['POST'])
+def guardar():
+    if request.method == 'POST':
+        # Funcion condicional para mostrar alerta en caso de no existir
+        if listaTareas == []:
+            messagebox.showwarning(
+                "¡Alerta!", "No existen tareas para almacenar")
+            return redirect(url_for('ingreso'))
+        else:
+            # Mensaje de autorizacion de guardado
+            resultado = messagebox.askquestion(
+                "Guardar registros", "¿Está seguro de que desea guardar los datos?")
+            # Funcion condicional de confirmacion de guardado
+            if resultado == "yes":
+                # Funcion de creacion y sobreescritura de archivo *.pickle
+                with open('Tareas.pickle', 'wb') as f:
+                    tareas = {'tareas': listaTareas}
+                    pickle.dump(tareas, f)
+                messagebox.showinfo("Info", "Los datos han sido guardados")
+                return redirect(url_for('ingreso'))
+            else:
+                return redirect(url_for('ingreso'))
 
 
 
