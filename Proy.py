@@ -34,7 +34,7 @@ def autoridades():
 @app.route('/actividadesFuturas')
 # Lamar a principal
 def actividadesFuturas():
-    '''Esta funcion muestra la página autoridades del sitio'''
+    '''Esta funcion muestra la página actividades futuras del sitio'''
     return render_template('actividadesFuturas.html')
 
 # 3. Funcion controlador que muestra la página autoridades
@@ -42,7 +42,7 @@ def actividadesFuturas():
 @app.route('/conocenos')
 # Lamar a principal
 def conocenos():
-    '''Esta funcion muestra la página autoridades del sitio'''
+    '''Esta funcion muestra la página conocenos del sitio'''
     return render_template('conocenos.html')
 
 # 3. Funcion controlador que muestra la página autoridades
@@ -50,7 +50,7 @@ def conocenos():
 @app.route('/contacto')
 # Lamar a principal
 def contacto():
-    '''Esta funcion muestra la página autoridades del sitio'''
+    '''Esta funcion muestra la página contacto del sitio'''
     return render_template('contacto.html')
 
 # 3. Funcion controlador que muestra la página autoridades
@@ -58,7 +58,7 @@ def contacto():
 @app.route('/galeriaDirectores')
 # Lamar a principal
 def galeriaDirectores():
-    '''Esta funcion muestra la página autoridades del sitio'''
+    '''Esta funcion muestra la página galeriaDirectores del sitio'''
     return render_template('galeriaDirectores.html')
 
 # 3. Funcion controlador que muestra la página autoridades
@@ -66,7 +66,7 @@ def galeriaDirectores():
 @app.route('/ingresoNotas')
 # Lamar a principal
 def ingresoNotas():
-    '''Esta funcion muestra la página autoridades del sitio'''
+    '''Esta funcion muestra la página ingresoNotas del sitio'''
     return render_template('ingresoNotas.html')
 
 # 3. Funcion controlador que muestra la página autoridades
@@ -74,7 +74,7 @@ def ingresoNotas():
 @app.route('/mision')
 # Lamar a principal
 def mision():
-    '''Esta funcion muestra la página autoridades del sitio'''
+    '''Esta funcion muestra la página mision del sitio'''
     return render_template('mision.html')
 
 # 3. Funcion controlador que muestra la página autoridades
@@ -82,7 +82,7 @@ def mision():
 @app.route('/noticias')
 # Lamar a principal
 def noticias():
-    '''Esta funcion muestra la página autoridades del sitio'''
+    '''Esta funcion muestra la página noticias del sitio'''
     return render_template('noticias.html')
 
 # 3. Funcion controlador que muestra la página autoridades
@@ -90,7 +90,7 @@ def noticias():
 @app.route('/objetivosInstitucionales')
 # Lamar a principal
 def objetivosInstitucionales():
-    '''Esta funcion muestra la página autoridades del sitio'''
+    '''Esta funcion muestra la página Objetivos Institucionales del sitio'''
     return render_template('objetivosInstitucionales.html')
 
 # 3. Funcion controlador que muestra la página autoridades
@@ -98,7 +98,7 @@ def objetivosInstitucionales():
 @app.route('/politicasPrivacidad')
 # Lamar a principal
 def politicasPrivacidad():
-    '''Esta funcion muestra la página autoridades del sitio'''
+    '''Esta funcion muestra la página politicas privacidad del sitio'''
     return render_template('politicasPrivacidad.html')
 
 # 3. Funcion controlador que muestra la página autoridades
@@ -106,7 +106,7 @@ def politicasPrivacidad():
 @app.route('/quito')
 # Lamar a principal
 def quito():
-    '''Esta funcion muestra la página autoridades del sitio'''
+    '''Esta funcion muestra la página quito del sitio'''
     return render_template('quito.html')
 
 # 3. Funcion controlador que muestra la página autoridades
@@ -114,7 +114,7 @@ def quito():
 @app.route('/sangolqui')
 # Lamar a principal
 def sangolqui():
-    '''Esta funcion muestra la página autoridades del sitio'''
+    '''Esta funcion muestra la página sangolqui del sitio'''
     return render_template('sangolqui.html')
 
 
@@ -126,6 +126,7 @@ listaTareas = []
 @app.route('/ingreso')
 # Lamar a principal
 def ingreso():
+    '''Esta funcion muestra la página ingreso del sitio'''
     return render_template('ingreso.html', listaTareas=listaTareas)
 
 # 2. Funcion controlador para agregar lista a tarea de pendientes
@@ -133,6 +134,7 @@ def ingreso():
 @app.route('/enviar', methods=['POST'])
 # Llamar a enviar
 def enviar():
+    '''Esta funcion envia los datos para el registro'''
     # Funcion condicional para enviar los datos del formulario
     if request.method == 'POST':
 
@@ -159,6 +161,7 @@ def enviar():
 # 3. Funcion controlador para borrar la lista de tareas
 @app.route('/borrar', methods=['POST'])
 def borrar():
+    '''Esta funcion borra los registros ingresados'''
     if request.method == 'POST':
         # Funcion condicional para mostrar alerta en caso de no existir
         if listaTareas == []:
@@ -179,6 +182,7 @@ def borrar():
 # 4. Funcion controlador para guardar registros en archivo *.pickle
 @app.route('/guardar', methods=['POST'])
 def guardar():
+    '''Esta funcion permite guardar los registros en un archivo pickle'''
     if request.method == 'POST':
         # Funcion condicional para mostrar alerta en caso de no existir
         if listaTareas == []:
