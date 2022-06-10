@@ -152,7 +152,7 @@
         </div>
         <div class="form-group">
             <label>Calificacion</label>
-            <input type="text" class="form-control" placeholder="Ingrese la calificacion" name="calificacion">
+            <input type="number" pattern="[0-9]" maxlength="2" class="form-control" placeholder="Ingrese la calificacion" name="calificacion">
         </div>
         
         <br>
@@ -183,7 +183,9 @@
                 <!--Mostrar correo electrónico del responsable-->
                 <th>{{tarea.asignatura}}</th>
                 <!--Mostrar la prioridad de la tarea-->
-                <th>{{tarea.calificacion}}</th>
+                <th>{{tarea.calificacion}}
+
+                </th>
             </tr>
             {% endfor %}
         </tbody>

@@ -140,12 +140,17 @@ def enviar():
 
         estudiante = request.form['estudiante']
         asignatura = request.form['asignatura']
-        calificacion = request.form['calificacion']
+        calificacion = int(request.form['calificacion'])
 
         # Funcion condicional para no registrar en caso de datos vacios
         if estudiante == '' or asignatura == '' or calificacion == '':
             #Mensaje de alerta de campos faltantes
-            messagebox.showwarning("¡Alerta!","Ingrese todos los campos")
+            messagebox.showwarning("¡Alerta!","Los datos no son correctos o incompletos")
+            return redirect(url_for('ingreso'))
+
+        elif calificacion >10 or calificacion <=0:
+            #Mensaje de alerta de campos faltantes
+            messagebox.showwarning("¡Alerta!","Los datos son incorrectos")
             return redirect(url_for('ingreso'))
 
         else:
